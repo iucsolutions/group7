@@ -1,0 +1,45 @@
+<channel
+   name="group7_Channel3"
+   guid="F2140A6D4C49C98F20DBE28F6E174A5C"
+   description=""
+   start_automatically="false"
+   logging_level="2"
+   use_message_filter="true">
+   <to_file
+      output_dir="${destDirGROUPNAME}/"
+      write_to_separate_file="true"
+      output_single_filename=""
+      use_prepended_info_as_filename="false"
+      output_file_id_type="1"
+      output_filename_mask="%i.txt"
+      temp_file_extension="tmp"
+      count_of_padding_digit="5"
+      ftp_server="ec2-184-72-202-147.compute-1.amazonaws.com"
+      ftp_username="GROUPNAME"
+      ftp_password="4Kp/jDu9n9qKHY6nAxvV/7BLHIBCCvYem9u0ZVMYhTE="
+      ftp_path="${ftpPathGROUPNAME}"
+      ftp_max_reconnect="5"
+      sftp_authentication_method="user_password"
+      use_ftp="true">
+      <dequeue_list>
+         <dequeue
+            source_name="group7_Channel1"
+            dequeue_guid="3155C319F1DE61231B855CAA6FDBD25B"/>
+      </dequeue_list>
+   </to_file>
+   <from_channel/>
+   <message_filter
+      filter_after_logging="true"
+      log_pre_post_filter_message="true"
+      keep_vmd_updated="false"
+      original_vmd_path=""
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true"
+      translator_guid="group7_Channel3-Filter-u1qpr3W9J843Wg"
+      translator_commit_id="ccaeab9e6c52930c204efed79e628e2beb1a99c3"
+      translator_commit_comment="Import Translators: 7">
+   </message_filter>
+</channel>
